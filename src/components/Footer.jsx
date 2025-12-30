@@ -214,7 +214,7 @@ const Footer = () => {
           {[
             { label: 'CONTACT', href: '/contact' },
             { label: 'ARCHIVE', href: '/archive' },
-            { label: 'SOURCE', href: 'https://github.com/Hiba-Malkan/personal-website.git' }
+            { label: 'SOURCE', href: 'https://github.com/Hiba-Malkan/portfolio-website.git' }
           ].map(link => (
             <a
               key={link.label}

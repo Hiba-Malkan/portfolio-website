@@ -132,6 +132,7 @@ const About = () => {
     ['5', 'projects launched'],
     ['70', 'books read this year'],
     ['300+', 'songs streamed this year'],
+    ['cant keep track', 'lines of code written'],
     ['730', 'coffees consumed'],
   ];
 
@@ -139,7 +140,7 @@ const About = () => {
     <section className="relative min-h-screen bg-black overflow-hidden">
       <canvas ref={canvasRef} className="fixed inset-0 z-0" />
 
-      <div className="relative z-10 max-w-[1600px] mx-auto px-16 py-40 grid grid-cols-1 xl:grid-cols-3 gap-24">
+      <div className="relative z-10 max-w-[1600px] mx-auto px-16 py-40 grid grid-cols-1 xl:grid-cols-3 gap-24 items-start">
         {/* LEFT: MANIFESTO */}
         <div className="xl:col-span-2 space-y-8">
           <h1 className={`text-[8rem] font-black text-white leading-none transition-all duration-1000 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
@@ -148,12 +149,15 @@ const About = () => {
           
           <div className="space-y-6 max-w-3xl">
             <p className="text-2xl text-gray-300">
-              Hi, I'm Hiba! A high-school student and a self-taught developer.
+              Hi, I'm Hiba! A high-school student and a self-taught (...youtube) developer.
             </p>
             
             <p className="text-lg text-gray-400">
               I'm currently studying physics, chemistry, math and computer science at school. I also do coral reef research after school, after I accidentally went down a rabbit hole of Wikipedia articles about coral bleaching.
-              I founded and tutor at Circuitrex, a non-profit that teaches students robotics. We have taught over 200 students so far!
+            </p>
+            
+            <p className="text-lg text-gray-400">
+              I also founded and tutor at Circuitrex, a robotics non-profit that teaches students robotics. We have taught over 200 students so far!
             </p>
             
             <p className="text-lg text-gray-400">
@@ -171,7 +175,7 @@ const About = () => {
         </div>
 
         {/* RIGHT: STATS - SOFT & MINIMAL */}
-        <div className="flex flex-col justify-center space-y-12">
+        <div className="space-y-12 xl:pt-32">
           {stats.map(([n, l], i) => (
             <div
               key={l}
