@@ -140,8 +140,7 @@ const About = () => {
     <section className="relative min-h-screen bg-black overflow-hidden">
       <canvas ref={canvasRef} className="fixed inset-0 z-0" />
 
-      <div className="relative z-10 max-w-[1600px] mx-auto px-8 md:px-16 py-20 md:py-40">
-        <div className="grid grid-cols-1 xl:grid-cols-3 gap-12 md:gap-24 items-start">
+      <div className="relative z-10 max-w-[1600px] mx-auto px-8 md:px-16 py-20 md:py-40 grid grid-cols-1 xl:grid-cols-3 gap-12 md:gap-24">
         {/* LEFT: MANIFESTO */}
         <div className="xl:col-span-2 space-y-8">
           <h1 className={`text-[8rem] font-black text-white leading-none transition-all duration-1000 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
@@ -150,7 +149,7 @@ const About = () => {
           
           <div className="space-y-6 max-w-3xl">
             <p className="text-2xl text-gray-300">
-              Hi, I'm Hiba! A high-school student and a self-taught developer.
+              Hi, I'm Hiba! A high-school student and a self-taught (...youtube) developer.
             </p>
             
             <p className="text-lg text-gray-400">
@@ -204,7 +203,6 @@ const About = () => {
           ))}
         </div>
       </div>
-    </div>
     </section>
   );
 };
