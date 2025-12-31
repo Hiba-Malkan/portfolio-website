@@ -142,8 +142,8 @@ const About = () => {
 
       <div className="relative z-10 max-w-[1600px] mx-auto px-8 md:px-16 py-20 md:py-40 grid grid-cols-1 xl:grid-cols-3 gap-12 md:gap-24">
         {/* LEFT: MANIFESTO */}
-        <div className="xl:col-span-2 space-y-8">
-          <h1 className={`text-[8rem] font-black text-white leading-none transition-all duration-1000 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        <div className="xl:col-span-2 space-y-8 max-w-full xl:max-w-4xl">
+          <h1 className="text-[6rem] xl:text-[7rem] 2xl:text-[8rem] font-black text-white leading-none transition-all duration-1000 break-words overflow-hidden max-w-full xl:max-w-3xl 2xl:max-w-4xl mx-auto xl:mx-0 {loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}">
             ABOUT
           </h1>
           

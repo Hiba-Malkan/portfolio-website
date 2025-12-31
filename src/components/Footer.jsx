@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   const canvasRef = useRef(null);
@@ -212,29 +213,53 @@ const Footer = () => {
 
         <div className="flex gap-6 flex-wrap justify-center">
           {[
-            { label: 'CONTACT', href: '/contact' },
-            { label: 'ARCHIVE', href: '/archive' },
-            { label: 'SOURCE', href: 'https://github.com/Hiba-Malkan/portfolio-website.git' }
+            { label: 'CONTACT', href: '/contact', internal: true },
+            { label: 'ARCHIVE', href: '/archive', internal: true },
+            { label: 'SOURCE', href: 'https://github.com/Hiba-Malkan/portfolio-website.git', internal: false }
           ].map(link => (
-            <a
-              key={link.label}
-              href={link.href}
-              className="
-                group relative
-                px-6 py-3 text-[10px]
-                tracking-[0.3em] uppercase
-                text-gray-400
-                border border-white/10
-                hover:text-white
-                hover:border-cyan-400
-                hover:shadow-[0_0_15px_rgba(0,255,255,0.5)]
-                transition-all duration-500
-                overflow-hidden
-              "
-            >
-              <span className="relative z-10">{link.label}</span>
-              <span className="absolute inset-0 bg-cyan-400/5 scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></span>
-            </a>
+            link.internal ? (
+              <Link
+                key={link.label}
+                to={link.href}
+                className="
+                  group relative
+                  px-6 py-3 text-[10px]
+                  tracking-[0.3em] uppercase
+                  text-gray-400
+                  border border-white/10
+                  hover:text-white
+                  hover:border-cyan-400
+                  hover:shadow-[0_0_15px_rgba(0,255,255,0.5)]
+                  transition-all duration-500
+                  overflow-hidden
+                "
+              >
+                <span className="relative z-10">{link.label}</span>
+                <span className="absolute inset-0 bg-cyan-400/5 scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></span>
+              </Link>
+            ) : (
+              <a
+                key={link.label}
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="
+                  group relative
+                  px-6 py-3 text-[10px]
+                  tracking-[0.3em] uppercase
+                  text-gray-400
+                  border border-white/10
+                  hover:text-white
+                  hover:border-cyan-400
+                  hover:shadow-[0_0_15px_rgba(0,255,255,0.5)]
+                  transition-all duration-500
+                  overflow-hidden
+                "
+              >
+                <span className="relative z-10">{link.label}</span>
+                <span className="absolute inset-0 bg-cyan-400/5 scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></span>
+              </a>
+            )
           ))}
         </div>
         
