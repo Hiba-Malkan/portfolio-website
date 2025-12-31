@@ -140,7 +140,8 @@ const About = () => {
     <section className="relative min-h-screen bg-black overflow-hidden">
       <canvas ref={canvasRef} className="fixed inset-0 z-0" />
 
-      <div className="relative z-10 max-w-[1600px] mx-auto px-16 py-40 grid grid-cols-1 xl:grid-cols-3 gap-24 items-start">
+      <div className="relative z-10 max-w-[1600px] mx-auto px-8 md:px-16 py-20 md:py-40">
+        <div className="grid grid-cols-1 xl:grid-cols-3 gap-12 md:gap-24 items-start">
         {/* LEFT: MANIFESTO */}
         <div className="xl:col-span-2 space-y-8">
           <h1 className={`text-[8rem] font-black text-white leading-none transition-all duration-1000 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
@@ -186,7 +187,7 @@ const About = () => {
               <div className="absolute inset-0 bg-cyan-400/0 group-hover:bg-cyan-400/5 blur-3xl transition-all duration-700 rounded-full"></div>
               
               {/* Number with soft glow */}
-              <div className="relative text-4xl font-black text-white/90
+              <div className="relative text-3xl md:text-4xl font-black text-white/90
                             drop-shadow-[0_0_10px_rgba(0,255,255,0)] 
                             group-hover:drop-shadow-[0_0_25px_rgba(0,255,255,0.4)]
                             group-hover:text-cyan-300
@@ -203,6 +204,7 @@ const About = () => {
           ))}
         </div>
       </div>
+    </div>
     </section>
   );
 };
