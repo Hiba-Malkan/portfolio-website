@@ -150,7 +150,7 @@ const About = () => {
           
           <div className="space-y-6 max-w-3xl">
             <p className="text-2xl text-gray-300">
-              Hi, I'm Hiba! A high-school student and a self-taught (...youtube) developer.
+              Hi, I'm Hiba! A high-school student and a self-taught developer.
             </p>
             
             <p className="text-lg text-gray-400">
